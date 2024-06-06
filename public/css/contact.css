@@ -1,0 +1,171 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:regular);
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    font-family: 'Montserrat';
+    background-image: url(https://images8.alphacoders.com/577/577980.jpg);
+}
+
+
+nav li, nav a {
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    background-color: #000000;
+}
+
+
+  h1{
+    text-align: center;
+    margin-top: 86px;
+    font-size: xxx-large;
+    font-family: 'Montserrat';
+    color:#ffffff;
+  }
+
+
+section{
+    display: inline-block;
+   
+}
+.formulaire{
+    width: 40%;
+    margin: 60px 60px 60px 60px;
+    border: 2px solid white;
+}
+
+
+form {
+    padding: 2.5rem 0.625rem;
+    border-radius: 0.25rem;
+  }
+  input::placeholder {
+    color: #8fb5cd;
+    opacity: 1;
+  }
+
+
+  .form-group {
+    margin: 0 auto 1.25rem auto;
+    padding: 0.25rem;
+   
+  }
+ 
+  .form-control {
+    display: block;
+    width: 100%;
+    height: 2.375rem;
+    padding: 0.375rem 0.75rem;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+ 
+  .form-control:focus {
+    border-color: #341161;
+    outline: 0;
+    box-shadow: 0 0 0 0.5rem rgba(0, 123, 255, 0.25);
+  }
+  .input-textarea {
+    min-height: 120px;
+    width: 100%;
+    padding: 0.625rem;
+    resize: vertical;
+    color: #8fb5cd;
+    opacity: 1;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+  }
+ 
+  .submit-button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background: #ffffff;
+    cursor: pointer;
+    color: #8fb5cd;
+    opacity: 1;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+  }  
+
+label, #title-comments p{
+  color: #ffffff;
+}
+
+
+  .maps{
+    display: inline-block;
+    margin-left: 70px;
+ 
+  }
+
+
+
+
+.localisation{
+    padding-left: 12%;
+    color: #ffffff;
+}
+
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #000000;
+}
+
+
+footer p {
+    color: white;
+}
+
+
+@media screen AND (max-width: 800px)
+{
+    
+    nav {
+        justify-content: flex-start;
+    }
+    
+    .formulaire {
+        display: flex;
+        justify-content: center;
+      margin-left: 200px;
+    }
+
+  .maps, .localisation{
+    margin-bottom: 25px;
+  }
+  
+  body {
+    
+}
+  
+    .footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+}

@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Montserrat';
+    background-color: #0f1536;
+    background-image: url("/eclipse_site_sae/public/images/bg_vulgarisation_accueil.jpg");
+    background-blend-mode: color-dodge;
+    background-size: cover;
+}
+
+/* vulgarisation */
+.brassage {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sous-etape {
+    width: 80%;
+    color: white;
+    margin: 20px 0 20px 0;
+}
+
+main h2 {
+    font-family: 'Koho';
+}
+
+
+.shematBrassage {
+    height: 400px;
+    margin: 20px 0 20px 0;
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,37 @@
+header {
+    z-index: 100;
+}
+
+nav li,
+nav a {
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    background-color: #000000;
+}
+
+ul {
+    margin: 0;
+}
+
+/* footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: #000000;
+    z-index: 100;
+}
+
+footer p {
+    color: white;
+}
