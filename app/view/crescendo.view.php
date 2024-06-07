@@ -8,9 +8,11 @@
         <div class="stock">
                 En stock: <?= $beerStock?>
         </div>
-        <div class="bouton-acheter">
-            <button id="ajouter-panier">Ajouter au panier</button>
-        </div>
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+            <div class="bouton-acheter">
+                <button type="submit" id="ajouter-panier">Ajouter au panier</button>
+            </div>
+        </form>
     </div>
 </div>
 <div class="fleche">

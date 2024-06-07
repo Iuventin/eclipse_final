@@ -73,24 +73,53 @@ function updateCart($id)
 
     setcookie('panier', json_encode($panierCopy));
 }
+
 function getPanierTotal($panier, $panierQuery)
 {
     $total = 0;
 
     if (isset($panier)) {
         foreach ($panier as $id_biere => $quantite) {
-            // Trouver la bière correspondante dans le tableau des bières
+            $found = false;
             foreach ($panierQuery as $biere) {
                 if ($biere['id_biere'] == $id_biere) {
-                    // Ajouter le prix total de cette bière (quantité * prix) au total général
-                    $total += $quantite * $biere['prix'];
+                    $found = true;
+                    if (isset($biere['prix'])) {
+                        $total += $quantite * $biere['prix'];
+                    } else {
+                        error_log("Le prix de la bière avec l'ID $id_biere n'est pas défini.");
+                    }
                     break;
                 }
+            }
+            if (!$found) {
+                error_log("La bière avec l'ID $id_biere n'est pas trouvée dans le panierQuery.");
             }
         }
     }
     return $total;
 }
+
+
+
+// function getPanierTotal($panier, $panierQuery)
+// {
+//     $total = 0;
+
+//     if (isset($panier)) {
+//         foreach ($panier as $id_biere => $quantite) {
+//             // Trouver la bière correspondante dans le tableau des bières
+//             foreach ($panierQuery as $biere) {
+//                 if ($biere['id_biere'] == $id_biere) {
+//                     // Ajouter le prix total de cette bière (quantité * prix) au total général
+//                     $total += $quantite * $biere['prix'];
+//                     break;
+//                 }
+//             }
+//         }
+//     }
+//     return $total;
+// }
 
 
 function createMembre(PDO $pdo, $query)
